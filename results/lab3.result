@@ -1,0 +1,76 @@
+Running page-merge-mm ... FAILED
+STDOUT:
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 2 bits
+Boot HART PMP Address Bits: 54
+Boot HART MHPM Info       : 0 (0x00000000)
+Boot HART Debug Triggers  : 0 triggers
+Boot HART MIDELEG         : 0x0000000000001666
+Boot HART MEDELEG         : 0x0000000000f0b509
+[[38;2;129;165;113;1m130 ms[0m] Hello, World!
+[[38;2;129;165;113;1m170 ms[0m] Executing command page-merge-mm
+[[38;2;129;165;113;1m1647 ms[0m] panicked at 'no thread is ready', src/thread/manager.rs:97:9
+Running pt-grow-stk-sc ... PASSED
+Running mmap-twice ... PASSED
+Running pt-write-code2 ... PASSED
+Running mmap-over-code ... PASSED
+Running pt-bad-read ... PASSED
+Running mmap-remove ... PASSED
+Running mmap-clean ... PASSED
+Running mmap-null ... PASSED
+Running mmap-over-stk ... PASSED
+Running mmap-bad-fd ... PASSED
+Running pt-write-code ... PASSED
+Running mmap-close ... PASSED
+Running mmap-shuffle ... PASSED
+Running page-merge-par ... FAILED
+STDOUT:
+Boot HART MHPM Info       : 0 (0x00000000)
+Boot HART Debug Triggers  : 0 triggers
+Boot HART MIDELEG         : 0x0000000000001666
+Boot HART MEDELEG         : 0x0000000000f0b509
+[[38;2;129;165;113;1m130 ms[0m] Hello, World!
+[[38;2;129;165;113;1m171 ms[0m] Executing command page-merge-par
+panicked at 'assertion failed: `(children[i] = exec(args[0], args)) != -1`', user/vm/parallel-merge.h:49
+[[38;2;129;165;113;1m2337 ms[0m] panicked at 'assertion failed: `(left == right)`
+  left: `12345`,
+ right: `0`', src/../test/user.rs:39:9
+Running mmap-misalign ... PASSED
+Running mmap-unmap ... PASSED
+Running page-merge-seq ... FAILED
+STDOUT:
+Boot HART MHPM Info       : 0 (0x00000000)
+Boot HART Debug Triggers  : 0 triggers
+Boot HART MIDELEG         : 0x0000000000001666
+Boot HART MEDELEG         : 0x0000000000f0b509
+[[38;2;129;165;113;1m130 ms[0m] Hello, World!
+[[38;2;129;165;113;1m172 ms[0m] Executing command page-merge-seq
+[[38;2;129;165;113;1m3614 ms[0m] User thread Default(3)[Running] dying due to page fault with error BadPtr.
+[[38;2;129;165;113;1m3618 ms[0m] panicked at 'assertion failed: `(left == right)`
+  left: `-1`,
+ right: `0`', src/../test/user.rs:39:9
+Running mmap-over-data ... PASSED
+Running mmap-zero ... PASSED
+Running mmap-write ... PASSED
+Running page-parallel ... PASSED
+Running pt-big-stk-obj ... PASSED
+Running pt-grow-bad ... PASSED
+Running pt-grow-stack ... PASSED
+Running mmap-inherit ... PASSED
+Running mmap-read ... PASSED
+Running pt-bad-addr ... PASSED
+Running page-linear ... PASSED
+Running mmap-overlap ... PASSED
+Running page-merge-stk ... FAILED
+STDOUT:
+Boot HART ISA Extensions  : zicntr
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 2 bits
+Boot HART PMP Address Bits: 54
+Boot HART MHPM Info       : 0 (0x00000000)
+Boot HART Debug Triggers  : 0 triggers
+Boot HART MIDELEG         : 0x0000000000001666
+Boot HART MEDELEG         : 0x0000000000f0b509
+[[38;2;129;165;113;1m133 ms[0m] Hello, World!
+[[38;2;129;165;113;1m174 ms[0m] Executing command page-merge-stk
+Early stopping...

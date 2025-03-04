@@ -1,0 +1,2 @@
+file-debug
+debug-qemu
